@@ -5,6 +5,18 @@ export default class InternShip extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column({ })
+  public name: string
+
+  @column({ })
+  public email : string
+  
+  @column({ })
+  public birthday: Date
+
+  @column({ })
+  public phone: number
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
