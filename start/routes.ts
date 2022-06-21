@@ -24,4 +24,6 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.get('api/intership', 'InternshipsController.index')
+Route.get('api/internship', 'InternshipsController.index')
+Route.post('api/internship', 'InternshipsController.add')
+
