@@ -2,11 +2,13 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema } from '@ioc:Adonis/Core/Validator'
 
 import InternShip from "App/Models/InternShip"
+import Database from '@ioc:Adonis/Lucid/Database'
 
 export default class InternshipsController {
 
     public async index(ctx: HttpContextContract) {
-        var list = await InternShip.all()
+        //var list = await InternShip.all()
+        var list = await Database.from("intern_ships").orderBy('id', 'asc')
         return list
     }
 
