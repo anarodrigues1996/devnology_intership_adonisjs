@@ -2,19 +2,20 @@ import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class InternShip extends BaseModel {
+
   @column({ isPrimary: true })
   public id: number
 
-  @column({ })
+  @column({})
   public name: string
 
-  @column({ })
-  public email : string
-  
-  @column({ })
+  @column({})
+  public email: string
+
+  @column({})
   public birthday: Date
 
-  @column({ })
+  @column({})
   public phone: number
 
   @column.dateTime({ autoCreate: true })
